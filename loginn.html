@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+    </script>
+    <script>
+      $(document).ready(function(){
+        $(".signup-form").hide();
+        $(".signup").css("background","none");
+        $(".signup").click(function(){
+          $(".login-form").hide();
+          $(".signup-form").show();
+          $(".login").css("background","none");
+          $(".signup").css("background","#fff");
+        })
+        $(".login").click(function(){
+          $(".login-form").show();
+          $(".signup-form").hide();
+          $(".login").css("background","#fff");
+          $(".signup").css("background","none");
+        })
+        $(".btn").click(function(){
+          $(".input").val("");
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">로그인</div>
+      <div class="signup">회원가입</div>
+
+      <div class="login-form">
+        <input type="text" placeholder="이메일 주소" class="input"><br>
+        <input type="password" placeholder="비밀번호" class="input"><br>
+        <div class="btn">확인</div>
+        <span><a href="#">아이디 혹은 비밀번호를 잃어버리셨나요?</a></span>
+      </div>
+      <div class="signup-form">
+        <input type="text" placeholder="성함" class="input"><br>
+        <input type="text" placeholder="이메일 주소" class="input"><br>
+        <input type="password" placeholder="비밀번호" class="input"><br>
+        <input type="text" placeholder="사업자 번호" class="input"><br>
+        <div class="btn">확인</div>
+      </div>
+    </div>
+  </body>
+</html>
